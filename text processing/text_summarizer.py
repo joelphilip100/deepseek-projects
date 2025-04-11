@@ -31,7 +31,7 @@ def summarize_text(text):
         'Authorization': f'Bearer {DEEPSEEK_API_KEY}'
     }
 
-    response = requests.request("POST", f'{DEEPSEEK_BASE_URL}chat/completions', headers=headers, json=payload)
+    response = requests.request("POST", f'{DEEPSEEK_BASE_URL}/chat/completions', headers=headers, json=payload)
 
     if response.status_code == 200:
         return response.json()["choices"][0]["message"]["content"]
