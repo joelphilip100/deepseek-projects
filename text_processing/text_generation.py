@@ -22,7 +22,8 @@ def generate_text(prompt, word_limit=100, language="English"):
                 "content": f"Write a {word_limit} word text in {language} based on this prompt: {prompt}"
             }
         ],
-        "stream": False
+        "stream": False,
+        "temperature": 1.3
     }
 
     headers = {
